@@ -37,10 +37,10 @@ def imgDownloader(img):
 		else:
 			download = requests.get(singleImg, stream=True)
 			fileName = str(int(time.time()+random.uniform(1,100)))
-			with open('/img/'+fileName+'.jpg', 'wb') as f:
+			with open('img/'+fileName+'.jpg', 'wb') as f:
 				for chunk in download:
 					f.write(chunk)
-			imgList.append('保存至：/img/'+fileName+'.jpg')
+			imgList.append('保存至：img/'+fileName+'.jpg')
 def getTogether(nicks,contents):
 	global imgList
 	weiboInfo=[]
